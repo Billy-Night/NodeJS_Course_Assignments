@@ -1,0 +1,13 @@
+<%- include('includes/head.ejs') %>
+    <main>
+        <h1>Profile</h1>
+        <% if (name.length > 0 && email.length > 0 ) { %>
+        <ul>
+            <li>Name: <%= name %> </li>
+            <li>Email: <%= email %> </li>
+        </ul>
+        <% } else { %>
+        <h2>Sorry no user found<h2>
+        <% } %>
+    </main>
+<%- include('includes/end.ejs')%>
