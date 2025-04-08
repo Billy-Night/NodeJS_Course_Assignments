@@ -1,10 +1,12 @@
 <%- include('includes/head.ejs') %>
     <main>
         <h1>Profile</h1>
-        <% if (name.length > 0 && email.length > 0 ) { %>
+        <% if (users.length > 0) { %>
         <ul>
-            <li>Name: <%= name %> </li>
-            <li>Email: <%= email %> </li>
+            <% users.forEach((user) => { %>
+                <li>Name: <%= user.name %></li>
+                <li>Email: <%= user.email %></li>
+            <% }) %>
         </ul>
         <% } else { %>
         <h2>Sorry no user found<h2>
